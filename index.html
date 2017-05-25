@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <link href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+
+        function time() {
+            today=new Date();
+            h=today.getHours();
+            m=today.getMinutes();
+            s=today.getSeconds();
+            document.getElementById('hora').innerHTML="Hora "+h+":"+m+":"+s;
+            setTimeout('time()',500);
+        }
+
+        $(document).ready(function() {
+            $('#data').DataTable({
+                searching: false,
+                paging: false,
+                info:false
+            });
+        } );
+    </script>
+
+</head>
+<body onload="time()">
+<header>
+    <h1>DataTable</h1>
+</header>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<table id="data" width="100%" class="display table table-striped table-bordered" cellspacing="0" cellpadding="3">
+    <thead>
+    <tr bgcolor="#2A98D3">
+        <th><span style="color: #ffffff; font-family: Arial; font-size: 0.82em;"><b>Data</b></span></th>
+        <th><span style="color: #ffffff; font-family: Arial; font-size: 0.82em;"><b>Codigo</b></span></th>
+        <th><span style="color: #ffffff; font-family: Arial; font-size: 0.82em;"><b>Produto</b></span></th>
+        <th class="text-center"><span style="color: #ffffff; font-family: Arial; font-size: 0.82em;"><b>Medida</b></span></th>
+        <th class="text-center"><span style="color: #ffffff; font-family: Arial; font-size: 0.82em;"><b>Qtd</b></span></th>
+        <th class="text-center"><span style="color: #ffffff; font-family: Arial; font-size: 0.82em;"><b>Valor Total</b></span></th>
+    </tr>
+    </thead>
+    <tbody id="relTable"><tr><td>11/05/2017 14:12</td><td>78880</td><td>QUEIJO MUSSARELA VIMILK   PARDES KG</td><td class="text-center">KG</td><td>9.920</td><td class="text-right">476.16</td></tr><tr><td>11/05/2017 14:12</td><td>7891032015406</td><td>EXTRATO DE  TOMATE OLE 840GR</td><td class="text-center">UN</td><td>20</td><td class="text-right">156.20</td></tr><tr><td>11/05/2017 14:12</td><td>7891144000109</td><td>VINAGRE DE ALCOOL TOSCANO 750ML</td><td class="text-center">UN</td><td>10</td><td class="text-right">23.40</td></tr><tr><td>11/05/2017 14:12</td><td>7896007801008</td><td>MOLHO SHOYU SAKURA TRADICIONAL 1L</td><td class="text-center">UN</td><td>6</td><td class="text-right">62.94</td></tr><tr><td>11/05/2017 14:12</td><td>7896025800779</td><td>KETCHUP TRAD CEPERA 400G</td><td class="text-center">UN</td><td>15</td><td class="text-right">90.15</td></tr><tr><td>11/05/2017 14:12</td><td>7896036092927</td><td>MAIONESE MARIANA 3KG</td><td class="text-center">UN</td><td>2</td><td class="text-right">54.60</td></tr><tr><td>11/05/2017 14:12</td><td>7896072644166</td><td>CHOC MAVALERIO 1KG</td><td class="text-center">UN</td><td>3</td><td class="text-right">101.64</td></tr><tr><td>11/05/2017 14:12</td><td>7896072646733</td><td>CHOC GRANULADO MIL CORES 150G</td><td class="text-center">UN</td><td>10</td><td class="text-right">42.80</td></tr><tr><td>11/05/2017 14:12</td><td>7896279601504</td><td>GORDURA VEGETAL COAMO</td><td class="text-center">UN</td><td>10</td><td class="text-right">105.00</td></tr><tr><td>11/05/2017 14:12</td><td>7898387900111</td><td>SABAO DE COCO EM BARRA MILAO 100G</td><td class="text-center">UN</td><td>15</td><td class="text-right">78.75</td></tr><tr><td>11/05/2017 14:12</td><td>7898409955020</td><td>FERM BIO SECO INST MASSA SALG FLEISCHMANN 500G</td><td class="text-center">UN</td><td>2</td><td class="text-right">42.60</td></tr><tr><td>11/05/2017 14:12</td><td>7898546062506</td><td>CACAU CONDBRAS 500G</td><td class="text-center">UN</td><td>3</td><td class="text-right">52.44</td></tr><tr><td>11/05/2017 14:36</td><td>7895770023297</td><td>BAUNILHA 960ML</td><td class="text-center">UN</td><td>2</td><td class="text-right">17.90</td></tr></tbody>
+    <tfoot>
+    <tr>
+        <td colspan="6" class="text-right"><b> R$ <span id="vrTotal">1304.58</span></b>
+        </td>
+    </tr>
+
+    </tfoot>
+</table>
+<footer style="text-align: center" >
+    <br>
+    <br>
+    <hr>
+    <script language=javascript type="text/javascript">
+    now = new Date
+    document.write ("Data " + now.getDay() + "/" + now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() )
+  </script>
+    <div id="hora"></div>
+    <hr>
+
+</footer>
+
+</body>
+</html>
